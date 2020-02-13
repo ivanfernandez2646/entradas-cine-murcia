@@ -1,0 +1,12 @@
+ul(class="pagination justify-content-center flex-wrap")
+    li(class="page-item")&attributes({'id': "pageP"})
+        a(class="page-link" href="#" aria-label="Previous")
+            span(aria-hidden="true") &laquo;
+    - var contadorPaginasTMP = 1;
+    while contadorPaginasTMP <= cantidadTotalPaginas
+        li(class="page-item")&attributes({'id': contadorPaginasTMP})
+            a(class="page-link" href="#") #{contadorPaginasTMP}
+            -- contadorPaginasTMP++
+    li(class="page-item")&attributes({'id': "pageN"})
+        a(class="page-link" href="#" aria-label="Next")
+            span(aria-hidden="true") &raquo;

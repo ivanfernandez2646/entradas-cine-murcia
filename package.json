@@ -1,0 +1,20 @@
+{
+  "name": "ProyectoFinalCine_IFC",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node .",
+    "compilarCardView": "pug -c -D -n cardViewPeliculaCompiled ./public/cardViewTemplate.pug",
+    "compilarReservaModal": "pug -c -D -n reservaModalCompiled ./public/reservaModalTemplate.pug",
+    "compilarAlertReserva": "pug -c -D -n alertReservaCompiled ./public/alertReservaConfirmada.pug",
+    "compilarPaginationTemplate": "pug -c -D -n paginationTemplateCompiled ./public/paginationTemplate.pug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^3.5.2"
+  }
+}

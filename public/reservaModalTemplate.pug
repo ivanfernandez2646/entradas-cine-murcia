@@ -1,0 +1,41 @@
+div(class="modal-dialog modal-dialog-centered" role="document")
+    div(class="modal-content")
+        div(class="modal-header")
+            h5(class="modal-title" id="exampleModalLabel") Reserva de butacas
+            button(type="button" class="close" data-dismiss="modal" aria-label="Close")
+                span(aria-hidden="true") &times;
+        div(class="modal-body p-0")
+            div(class="modal-body p-20")
+                h5 #{pase.titulo}
+                    span(class="badge badge-primary ml-1 mr-1") Sala #{pase.sala}
+                    span(class="badge badge-warning mr-1") #{pase.cine}
+                    span(class="badge badge-danger mr-1") #{pase.hora}
+                div(class="d-flex justify-content-center mt-4")
+                    table
+                        tbody(id="tableButacasBody")
+                            - let numButaca = 1;
+                            - let row = 1;
+                            while row < pase.filas
+                                tr
+                                    - var butacaFila = 0;
+                                    while butacaFila < butacasPorFila
+                                        - butacaFila++
+                                        - var esButacaReservada = false;
+                                        each numButacaReservada in pase.reservadas
+                                            #numButacaReservada
+                                                if numButacaReservada == numButaca
+                                                    - esButacaReservada = true;
+                                                        td(bgcolor="#FF0000" id=numButaca)
+                                                            img(src="img/butacaCine.png" alt="" height='25' width='25')
+                                        #esButacaReservada
+                                            if esButacaReservada == false
+                                                td(bgcolor="#00FF00" class="noReservada" id=numButaca)
+                                                    img(src="img/butacaCine.png" alt="" height='25' width='25')            
+                                        - numButaca++
+                                - row++
+            p(class="p text-center text-white bg-info mb-0") Pantalla
+        div(class="modal-footer")
+            p Elegidas 
+                span(id="cantidadButacas") 0 butacas.
+            button(type="button" class="btn btn-secondary" data-dismiss="modal") Cancelar
+            button(type="button" class="btn btn-primary" id="btnConfirmar") Confirmar

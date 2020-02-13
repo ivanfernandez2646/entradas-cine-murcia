@@ -1,0 +1,14 @@
+h4(class="alert-heading") Reserva confirmada! Resumen:
+hr
+div(class="d-flex justify-content-center")
+    div
+        p Cine: 
+            b #{paseReservado.cine}
+        p Butacas Reservadas: 
+            b #{paseReservado.butacas}
+        p Hora: 
+            b #{paseReservado.hora}
+    div(class="ml-5")
+        img(alt="" width="80" height="120")&attributes({'src': paseReservado.poster})
+hr
+p Que la disfrute!!

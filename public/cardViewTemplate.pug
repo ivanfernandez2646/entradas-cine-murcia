@@ -1,0 +1,15 @@
+- var delayPaseScale = 0.07;
+each pase in pases
+    div(class="card flex-row text-break  m-3 border-primary cardPelicula" style="width: 315px; min-height: 200px; animation: scaleCard 0.8s "+delayPaseScale+"s forwards;")
+        div(id="divPoster" class="card" style="width: 50%; height: 100%;")
+            img(class="rounded" alt="Imagen Película" style="width: 100%; height: 100%;")&attributes({'src': pase.poster})
+        div(class="card-block px-2 m-2" style="width: 65%; height: 100%;")
+            h5(class="card-title") #{pase.titulo}
+            p(class="text-wrap")
+                p(class="card-text font-weight-light" id="salaCine") Sala #{pase.sala} - #{pase.cine}
+                    p(class="font-weight-bold")   
+            each hora in pase.horas                 
+                a(href="#" class="btn btn-primary m-1 btHora") #{hora}
+    - delayPaseScale = delayPaseScale + 0.07
+
+

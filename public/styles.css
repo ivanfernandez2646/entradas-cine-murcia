@@ -1,0 +1,85 @@
+html,body{
+    min-height: 100%;
+}
+
+header{
+    background-image: url(img/logo.jpg);
+    text-decoration-color: white;
+}
+
+#limpiarBuscador{
+    position: absolute;
+    right: 0;
+}
+
+.cardPelicula{
+    transform: scale(0);
+}
+
+.cardPelicula:hover{
+    box-shadow: 2px 2px 6px 6px #000000;
+}
+
+@keyframes scaleCard{
+    100% {transform: scale(1)};
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+}
+
+#alertReservadaOK{
+    position: fixed;
+    width: 350px;
+    height: 340px;
+    top: calc(50% - 170px);
+    left: calc(50% - 175px);
+}
+
+footer{
+    visibility: hidden;
+}
+
+/*Logo Cargando*/
+.loading{
+    position: fixed;
+    display: inline-block;
+    border-top: 7px solid red;
+    border-right: 7px solid blue;
+    border-bottom: 7px solid yellow;
+    border-left: 7px solid green;
+    top: calc(50% - 38px);
+    left: calc(50% - 38px);
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    animation: animationCircle 1s linear infinite reverse;
+}
+
+.loadingLittle{
+    position: relative;
+    display: inline-block;
+    border-top: 7px solid red;
+    border-right: 7px solid blue;
+    border-bottom: 7px solid yellow;
+    border-left: 7px solid green;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    border-radius: 10%;
+}
+
+.loadingLittle > img{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: calc(50% - 10px);
+    left: calc(50% - 10px);
+}
+
+@keyframes animationCircle{
+    0% {transform: rotateZ(360deg) scale(1);}
+}

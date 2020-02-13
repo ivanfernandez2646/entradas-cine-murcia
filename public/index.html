@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entradas Cine</title>
+    <link rel="shortcut icon" type="image/x-icon" href="img/logoCargando.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="container">
+
+    <!-- Cabecera -->
+    <header class="row">
+        <div class="container m-3">
+            <div class="row">
+                <h1 class="text-white font-weight-normal">Entradas</h1>
+            </div>
+            <div class="row">
+                <h4 class="text-white">Bienvenido al servicio de entradas de cine.</h4>
+            </div>
+        </div>
+    </header>
+
+    <!-- Buscador y límite de páginas -->
+    <div class="row mt-5">
+        <div class="input-group w-50 mx-auto">
+                <input type="search" class="form-control" placeholder="Buscar títulos o cine... (Enter)"
+                    aria-label="Buscar títulos o cine..." aria-describedby="basic-addon2" id="buscadorText">
+                <div class="input-group-append" id="buscador">
+                    <span class="input-group-text" id="basic-addon2">
+                        <img src="img/lupaBuscador.png" width="20">
+                    </span>
+                </div>
+            </div>
+        <p class="col-md-4 text-center align-text-bottom mt-md-0 mt-4 mb-0">Pases por página: <span><input class="p-1 bg-light" id="pasesPorPagina" type="number" name="quantity" value="6" min="1" max="9"></span></p>
+    </div>
+
+    <!-- Películas -->
+    <div id="contenedorPeliculas" class="row d-flex justify-content-around mt-5 mb-3">
+
+    </div>
+
+    <!-- Pagination -->
+    <nav aria-label="Page navigation" id="paginationNav">
+    </nav>
+      
+
+    <!-- Footer -->
+    <footer class="bg-primary">
+        <p class="text-center font-weight-bold p-2 m-0">Servicio de Entradas de Cine. 2020 @Iván</p>
+    </footer>
+
+    <!-- Modal Reserva Butacas -->
+    <div class="modal fade" id="modalReservas" tabindex="-1" role="dialog" aria-labelledby="modalReservas"
+        aria-hidden="true">
+
+    </div>
+
+    <!--Logo Cargando -->
+    <span class="loading" id="loading">
+        <span class="loadingLittle">
+            <img src="img/logoCargando.png" alt="cargando...">
+        </span>
+    </span>
+
+    <!-- Alerta Reserva Correcta -->
+    <div id="alertReservadaOK" class="alert alert-success" style="display:none;">
+        <h4 class="alert-heading">Reserva confirmada! Resumen:</h4>
+        <hr>
+        <div class="d-flex justify-content-center">
+            <div>
+                <p>Película: <b>La Maldición de las verduras</b></p>
+                <p>Butacas Reservadas: <b>40,23,53,2,3</b></p>
+                <p>Hora: <b>20:30</b></p>
+            </div>
+            <div class="ml-5">
+                <img src="https://images.justwatch.com/poster/8828160/s166" alt="" width="80" height="120">
+            </div>
+        </div>
+        <hr>
+        <p>Qué la disfrute!!</p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
+    <script src="entradasCli.js"></script>
+    <script src="cardViewTemplate.js"></script>
+    <script src="reservaModalTemplate.js"></script>
+    <script src="alertReservaConfirmada.js"></script>
+    <script src="paginationTemplate.js"></script>
+</body>
+
+</html>
