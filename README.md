@@ -1,6 +1,7 @@
 <h1>Entradas Cine</h1>
 <br/>
-Take a look at the website.
+<p>A web project cinema tickets using a lot of technologies. Node.js, MongoDB, HTML, CSS, Bootstrap, Javascript and PUG. It's simulate the process 
+ of book tickets for cinema. I'm so proud of this, cause I developed in less than two weeks for a subject.Take a look and test the funcionality.</p>
 http://entradas-cine-murcia.herokuapp.com/
 <br/>
 <h2>Main menu</h2>
@@ -8,5 +9,4 @@ http://entradas-cine-murcia.herokuapp.com/
 <img src="https://i.ibb.co/wggBFY6/Capture.jpg" alt="MainMenu" width="600" height="450" border="0">
 <br/>
 <h2>Select chairs</h2>
-<p>In this part you can select your chairs to book</p>
 <img src="https://i.ibb.co/jkNGKnx/Capture.jpg" alt="SelectChairs" width="600" height="450" border="0">
