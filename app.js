@@ -22,7 +22,7 @@ app.get("/pases", function(req, res, next){
       res.setHeader("Content-Type", "application/json");
       res.status(200);
       res.json({pases: pasesObtenidos});
-   }).catch(() => {
+   }).catch((err) => {
       res.status(400);
       res.send();
    });
@@ -63,4 +63,6 @@ app.post("/reservas", function(req, res, next){
    })
 });
 
-app.listen(PUERTO);
+app.listen(PUERTO, () => {
+   console.log(`App is now listening in port ${PUERTO}`);
+});

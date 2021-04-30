@@ -1,13 +1,7 @@
 const MongoClient = require("mongodb").MongoClient;
 
-var urlMongo = "mongodb+srv://ivan:05y3zIMZIgPXf03E@cluster0-ew7po.gcp.mongodb.net/test?retryWrites=true&w=majority";
+var urlMongo = "mongodb+srv://ivan:RBBpJvy6wm9maftx@cluster0.ew7po.gcp.mongodb.net/entradas?retryWrites=true&w=majority";
 
-/*MongoClient.connect(urlMongo, {useUnifiedTopology: true}, function(err, db) {
-    if (err) throw new Error(err);
-    console.log("Connected!"); 
-    var dbo = db.db("entradas");
-});
-*/
 module.exports.getPases = async function (filtroPalabras, pageSeleccionada, limitePeliculas) {
     var db = await MongoClient.connect(urlMongo, {
         useUnifiedTopology: true
